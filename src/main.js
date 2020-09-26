@@ -3,6 +3,16 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import jQuery from 'jquery/dist/jquery.min.js';
+import Popper from '@popperjs/core/dist/umd/popper.min.js';
+import Bootstrap from 'bootstrap/dist/js/bootstrap.min.js';
+import 'bootstrap/dist/css/bootstrap.css';
+import "font-awesome/css/font-awesome.css";
+import "font-awesome/css/font-awesome.min.css";
+
+import VueCharts from 'vue-chartjs';
+Vue.use(VueCharts);
+
 Vue.config.productionTip = false
 
 new Vue({
