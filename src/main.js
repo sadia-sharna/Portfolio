@@ -9,7 +9,7 @@ import Bootstrap from 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap/dist/css/bootstrap.css';
 import "font-awesome/css/font-awesome.css";
 import "font-awesome/css/font-awesome.min.css";
-
+import moment from 'moment';
 import VueCharts from 'vue-chartjs';
 Vue.use(VueCharts);
 

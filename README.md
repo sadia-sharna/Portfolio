@@ -1,4 +1,4 @@
-# personalprofile
+# Portfolio
 
 ## Project setup
 ```
