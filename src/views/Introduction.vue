@@ -60,9 +60,7 @@
 
                       <div class="card-body text-left">
 
-                          <TitleWithDescriptionCard title = "Who am I?"
-                          description = "  I'm a software engineer from Bangladesh. I'm a true fan of in competitive programming and web development.
-                             Currently, I am working at Syntec Consulting Limited which provides solution for Healthcare (EHR and EMR)."/>
+
 
                           <!-- <TitleWithDescriptionCard title = "Professional Summary"
                           description = "Results-oriented software engineering professional with
@@ -71,11 +69,9 @@
                           technologies and working in both team and self-directed
                           settings. Very Passionate and honest."/> -->
 
-
-
-
-
-
+                          <TitleWithDescriptionCard title = "Who am I?"
+                          :description = "aboutmeDescription"/>
+                          <Skills title = "Tools & technologies"/>
 
                       </div>
                     </div>
@@ -94,22 +90,87 @@
 
 // @ is an alias to /src
 import TitleWithDescriptionCard from '@/components/TitleWithDescriptionCard.vue';
-// import About from '@/views/About.vue';
+import Skills from '@/views/Skills.vue';
 
 export default {
     name: 'Introduction',
     components: {
-      TitleWithDescriptionCard
+      TitleWithDescriptionCard,
+      Skills,
     },
     data() {
         return {
-            userdata: {
-                name: 'Sadia',
-                sex: 'Female',
-                age: 23
-            },
-
+          jobStartmonth : 6,
+          jobStartyear: 2019,
+          jobDuration:'',
+          aboutmeDescription: '',
         }
+    },
+    mounted(){
+      this.jobDuration = this.getExperienceDuration(this.jobStartyear,this.jobStartmonth);
+      this.aboutmeDescription = `I'm a software engineer from Bangladesh. I'm a true fan of competitive programming and web development.
+         Currently, I am working at Syntec Consulting Limited for ${this.jobDuration.years} yrs and ${this.jobDuration.months} mos which provides solution for Healthcare (EHR and EMR).`;
+
+
+
+    },
+
+    methods:{
+      getExperienceDuration(year,month){
+
+
+      var now = new Date();
+      var today = new Date(now.getYear(),now.getMonth(),now.getDate());
+
+      var yearNow = now.getYear();
+      var monthNow = now.getMonth();
+      var dateNow = now.getDate();
+
+      var dob = new Date(year,month,now.getDate());
+
+      var yearDob = dob.getYear();
+      var monthDob = dob.getMonth();
+      var dateDob = dob.getDate();
+      var age = {};
+      var ageString = "";
+      var yearString = "";
+      var monthString = "";
+      var dayString = "";
+
+
+      var yearAge = yearNow - yearDob;
+
+      if (monthNow >= monthDob)
+         var monthAge = monthNow - monthDob;
+      else {
+         yearAge--;
+         var monthAge = 12 + monthNow -monthDob;
+      }
+
+      if (dateNow >= dateDob)
+         var dateAge = dateNow - dateDob;
+      else {
+         monthAge--;
+         var dateAge = 31 + dateNow - dateDob;
+
+         if (monthAge < 0) {
+         monthAge = 11;
+         yearAge--;
+         }
+      }
+
+      age = {
+         years: yearAge,
+         months: monthAge,
+         days: dateAge
+         };
+
+
+      return age;
+
+
+
+     },
     },
 }
 
