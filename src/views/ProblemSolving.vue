@@ -21,8 +21,8 @@
     <div class="card-body text-left font-14">
         <ul class="list-group list-group-flush" v-for="item in contestDataList">
 
-                <a href="#" class="list-group-item list-group-item-action bg-light">
-                    <div class="list-group-item-heading font-weight-bold">{{item.contestPlatform}} (Id: {{item.contestId}})</div>
+                <a :href="item.idLink" target="_blank" class="list-group-item list-group-item-action bg-light">
+                    <div class="list-group-item-heading font-weight-bold">{{item.contestPlatform}} (Id:{{item.contestId}})</div>
 
                 </a>
 
@@ -75,24 +75,28 @@ export default {
           {
             contestId: '75603',
             contestPlatform : "UVA Online Judge",
-            contestDescription : "Solved 84 problems"
+            contestDescription : "Solved 84 problems",
+            idLink:"https://uhunt.onlinejudge.org/id/756032"
 
           },
           {
             contestId: "Sadia_Sharna",
             contestPlatform : "Codeforces",
-            contestDescription : "Contest rating: 896. Participated in 21 contests"
+            contestDescription : "Contest rating: 896. Participated in 21 contests",
+            idLink:"https://codeforces.com/profile/Sadia_Sharna"
           },
           {
             contestId: "s_sharna06",
             contestPlatform : "HackerRank",
-            contestDescription : "2 star in problem solving, 3 star in Python, 2 star in Javascript"
+            contestDescription : "2 star in problem solving, 3 star in Python, 2 star in Javascript",
+            idLink:"https://www.hackerrank.com/s_sharna06"
 
           },
           {
             contestId: "59336",
             contestPlatform : "URI Online Judge",
-            contestDescription : "Solved 107 problems"
+            contestDescription : "Solved 107 problems",
+            idLink: "https://www.urionlinejudge.com.br/judge/en/profile/59336"
 
           },
         );

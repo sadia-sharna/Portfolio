@@ -44,8 +44,8 @@
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item"> <i class="fa fa-phone" aria-hidden="true"></i> +8801914658423</li>
                                         <li class="list-group-item"> <i class="fa fa-envelope" aria-hidden="true"></i> s.sharna06@gmail.com</li>
-                                        <a href="https://github.com/sadia-sharna" class="list-group-item list-group-item-action"><i class="fa fa-github" aria-hidden="true"></i> sadia-sharna</a>
-                                        <a href="https://www.linkedin.com/in/sadia-tasnim-b82aa7160/?originalSubdomain=bd" class="list-group-item list-group-item-action"><i class="fa fa-linkedin-square" aria-hidden="true"></i> sadia-tasnim-b82aa7160ac</a>
+                                        <a href="https://github.com/sadia-sharna" target="_blank" class="list-group-item list-group-item-action"><i class="fa fa-github" aria-hidden="true"></i> sadia-sharna</a>
+                                        <a href="https://www.linkedin.com/in/sadia-tasnim-b82aa7160/?originalSubdomain=bd" target="_blank" class="list-group-item list-group-item-action"><i class="fa fa-linkedin-square" aria-hidden="true"></i> sadia-tasnim-b82aa7160ac</a>
                                     </ul>
 
                                 </div>
