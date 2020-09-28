@@ -12,7 +12,7 @@
 </style>
 
 <template>
-
+<div>
 <div class="card border-0">
     <div class="card-header text-left darkblue-bg text-white">
         {{title}}
@@ -56,6 +56,47 @@
 
     </div>
 </div>
+<div class="card border-0">
+    <div class="card-header text-left darkblue-bg text-white">
+        {{mostUsedTechTitle}}
+
+    </div>
+    <div class="card-body text-left font-14">
+        <p >
+          <div class="row">
+
+                <canvas id="pieChartofCode" class="col-sm-6"></canvas>
+
+
+                <canvas id="pieChartofDB" class="col-sm-6"></canvas>
+
+
+          </div>
+          <div class="row">
+                <canvas id="pieChartofFramework" class="col-sm-6 mx-auto"></canvas>
+
+          </div>
+
+<!--
+
+          <div class="w-50  d-sm-flex float-right">
+                      <canvas id="pieChartofFramework"></canvas>
+
+          </div>
+
+          <div class=" w-50 d-sm-flex">
+                      <canvas id="pieChartofDB"></canvas>
+
+          </div>
+          <div class="w-50 text-center d-sm-flex mx-auto mt-2">
+                      <canvas id="pieChartofCode"></canvas>
+
+          </div> -->
+
+        </p>
+      </div>
+    </div>
+</div>
 
 </template>
 
@@ -70,6 +111,7 @@ export default {
     name: 'Skills',
     props: {
         title: String,
+        mostUsedTechTitle: String,
 
     },
     data() {
@@ -84,15 +126,43 @@ export default {
                 orm: [],
 
             },
+            mostUsedTechList: [],
         }
     },
     mounted() {
       this.getSkillSet();
+      this.getMostUsedTechPercntgWithLabel();
+
 
 
     },
 
     methods: {
+      getMostUsedTechPercntgWithLabel(){
+        this.mostUsedTechList = {
+          pieChartofCode : {
+            labels: ["C#", "JavaScript", "Python", "C++", "Java", "C"],
+            data:[35, 40, 10, 15, 7, 3],
+          },
+          pieChartofFramework : {
+            labels: ["Vue.js", "ASP.NET Core", "ASP.NET MVC", "AngularJS"],
+            data:[30, 20, 15, 15],
+          },
+          pieChartofDB : {
+            labels: ["SQL", "SQLite","MongoDB", "MySQL", "PL/SQL"],
+            data:[40, 25, 15, 15, 5],
+          },
+        
+        };
+        for (var key in this.mostUsedTechList) {
+          //console.log(key + " -> " + p[key]);
+          this.getPieChart(this.mostUsedTechList[key], key);
+
+        }
+        // this.getPieChart(this.mostUsedTechList.pieChartofCode);
+
+
+      },
       getSkillSet(){
       this.skillSet.code.push("C#", "JavaScript", "Python", "C++", "Java", "C");
       this.skillSet.framework.push("ASP.NET Core", "ASP.NET MVC", "Vue.js", "AngularJS", "LINQ");
@@ -103,6 +173,32 @@ export default {
       this.skillSet.os.push("Windows", "Linux");
 
       },
+      getPieChart(item, chartId) {
+              let colorsList = [];
+              let i;
+
+              for (i = 0; i < item.labels.length; i++) {
+                  colorsList.push('#' + ((Math.random() * 0xffffff) << 0).toString(16));
+              }
+
+              var ctx = document.getElementById(chartId).getContext('2d');
+              // if (this.chartId) {
+              //     this.chartId.destroy();
+              // }
+              this.chartId = new Chart(ctx, {
+                  type: 'pie',
+                  data: {
+                      labels: item.labels,
+                      datasets: [{
+                          backgroundColor: colorsList,
+                          data: item.data
+                      }],
+
+                  },
+
+              });
+          },
+
 
     },
 }
