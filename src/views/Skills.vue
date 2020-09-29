@@ -29,6 +29,11 @@
                 <button type="button" class="btn darkyellow-bg" v-for="item in skillSet.framework">{{item}}</button>
             </div>
             <div class="btn-group mt-2 flex-wrap" role="group" aria-label="Basic example">
+                <button type="button" class="btn darkblack-bg text-white">Runtime Environment</button>
+                <button type="button" class="btn darkyellow-bg" v-for="item in skillSet.runtimeEnvironment">{{item}}</button>
+            </div>
+
+            <div class="btn-group mt-2 flex-wrap" role="group" aria-label="Basic example">
                 <button type="button" class="btn darkblack-bg text-white">Database</button>
                 <button type="button" class="btn darkyellow-bg" v-for="item in skillSet.database">{{item}}</button>
             </div>
@@ -124,6 +129,7 @@ export default {
                 cloud: [],
                 os: [],
                 orm: [],
+                runtimeEnvironment:[],
 
             },
             mostUsedTechList: [],
@@ -152,7 +158,7 @@ export default {
             labels: ["SQL", "SQLite","MongoDB", "MySQL", "PL/SQL"],
             data:[40, 25, 15, 15, 5],
           },
-        
+
         };
         for (var key in this.mostUsedTechList) {
           //console.log(key + " -> " + p[key]);
@@ -168,6 +174,7 @@ export default {
       this.skillSet.framework.push("ASP.NET Core", "ASP.NET MVC", "Vue.js", "AngularJS", "LINQ");
       this.skillSet.database.push("SQL", "SQLite","MongoDB", "MySQL", "PL/SQL");
       this.skillSet.orm.push("Entity Framework", "Entity Framework Core");
+      this.skillSet.runtimeEnvironment.push("Node.js");
       this.skillSet.versionControl.push("Git", "TFS");
       this.skillSet.cloud.push("Azure");
       this.skillSet.os.push("Windows", "Linux");
