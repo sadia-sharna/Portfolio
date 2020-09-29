@@ -51,7 +51,10 @@
                                 </div>
                             </div>
                             <ProblemSolving title="Problem Solving" />
+                            <Achievements title="Achievements" />
+                            <Curriculum title="Curriculum Activities" />
                             <Reference title="Reference" />
+
 
 
 
@@ -100,6 +103,9 @@ import Skills from '@/views/Skills.vue';
 import ProblemSolving from '@/views/ProblemSolving.vue';
 import Projects from '@/views/Projects.vue';
 import Reference from '@/views/Reference.vue';
+import Achievements from '@/views/Achievements.vue';
+import Curriculum from '@/views/Curriculum.vue';
+
 
 export default {
     name: 'Home',
@@ -108,7 +114,9 @@ export default {
         Skills,
         ProblemSolving,
         Projects,
-        Reference
+        Reference,
+        Achievements,
+        Curriculum
     },
     data() {
         return {
