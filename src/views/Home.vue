@@ -51,6 +51,8 @@
                                 </div>
                             </div>
                             <ProblemSolving title="Problem Solving" />
+                            <Reference title="Reference" />
+
 
 
 
@@ -97,6 +99,7 @@ import TitleWithDescriptionCard from '@/components/TitleWithDescriptionCard.vue'
 import Skills from '@/views/Skills.vue';
 import ProblemSolving from '@/views/ProblemSolving.vue';
 import Projects from '@/views/Projects.vue';
+import Reference from '@/views/Reference.vue';
 
 export default {
     name: 'Home',
@@ -104,7 +107,8 @@ export default {
         TitleWithDescriptionCard,
         Skills,
         ProblemSolving,
-        Projects
+        Projects,
+        Reference
     },
     data() {
         return {

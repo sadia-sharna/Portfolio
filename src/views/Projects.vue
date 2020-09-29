@@ -92,48 +92,43 @@ export default {
         }
        },
       getPetProjectData(){
+
         this.petProjectList.push(
           {
             projectTitle: 'Portfolio',
             projectTools : "Node.js, Vue.js, Bootstrap 4",
-            projectDescription : "This project is under development.",
+            projectDescription : "In this project I have created my personal portfolio where all my skills and projects are highlighted and various charts has been used to show my expertise in all the fields I have interest or familiar with.",
             projectLink:"https://github.com/sadia-sharna/Portfolio",
             projectImage:"Portfolio.jpg",
-
           },
           {
             projectTitle: 'CarStoreUI',
             projectTools : "Vue.js, Node.js",
-            projectDescription : "In this project, user can perform CRUD operation, Autocomplete Search, View Cars in Pie chart Manufacturer Wise and a list of Cars with details in pagination.",
+            projectDescription : "This is a single page application project with features like CRUD, Autocomplete Search. Cars can be viewed via pie charts Manufacturer Wise and in pagination with details.",
             projectLink:"https://github.com/sadia-sharna/CarStoreUI",
             projectImage:"CarStore.jpg",
-
           },
           {
             projectTitle: 'CarStoreAPI',
             projectTools : "ASP. NET Web API 2.0, DB:SQL, Cloud: Azure",
-            projectDescription : "Autocomplete Search, Pagination and CRUD support from API for CarStoreUI Application.",
+            projectDescription : "API for Autocomplete Search, Pagination and CRUD support is written for CarStoreUI Application.",
             projectLink:"https://github.com/sadia-sharna/CarStore",
-          //  projectImage:"CarStore.jpg",
-
+            projectImage:"CarStore.jpg",
           },
           {
             projectTitle: 'ResumeMakerUI',
             projectTools : "AngularJS",
-            projectDescription : "This project was a learning project, where User will give all the Basic Information(Introduction, Skills, Education, Curricular Activities and Reference). And It will create a Resume accordingly.",
+            projectDescription : "A single page application where user can give all the Basic Information(Introduction, Skills, Education, Curricular Activities and Reference) as input and it will create a nice resume for him/her.",
             projectLink:"https://github.com/sadia-sharna/ResumeMakerApplication",
             projectImage:"ResumeMaker.jpg",
-
           },
           {
             projectTitle: 'ResumeMakerAPI',
             projectTools : "ASP.NET Web API, C#. DB: SQL",
-            projectDescription : "Stores all the user input data and fetch it to show a prepared Resume for ResumeMakerUI application",
+            projectDescription : "API for storing and fetching user intput data to help the ResumeMakerUI application create a resume for the user.",
             projectLink:"https://github.com/sadia-sharna/ResumeMakerApplication",
-            //projectImage:"ResumeMaker.jpg",
-
+            projectImage:"ResumeMaker.jpg",
           },
-
         );
       },
     },
