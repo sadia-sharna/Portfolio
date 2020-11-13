@@ -46,6 +46,8 @@
                                         <li class="list-group-item"> <i class="fa fa-envelope" aria-hidden="true"></i> s.sharna06@gmail.com</li>
                                         <a href="https://github.com/sadia-sharna" target="_blank" class="list-group-item list-group-item-action"><i class="fa fa-github" aria-hidden="true"></i> sadia-sharna</a>
                                         <a href="https://www.linkedin.com/in/sadia-tasnim-b82aa7160/?originalSubdomain=bd" target="_blank"class="list-group-item list-group-item-action"><i class="fa fa-linkedin-square" aria-hidden="true"></i> sadia-tasnim-b82aa7160ac</a>
+                                        <a href="https://codepen.io/sadia-sharna" target="_blank"class="list-group-item list-group-item-action"><i class="fa fa-codepen" aria-hidden="true"></i> codepen.io/sadia-sharna</a>
+
                                     </ul>
 
                                 </div>

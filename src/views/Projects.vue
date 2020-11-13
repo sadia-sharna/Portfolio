@@ -37,14 +37,7 @@
                   <p class="card-text">{{item.projectDescription}}</p>
                 </div>
               </div>
-              <!-- <div class="card ">
-                <div class="card-body">
-                  <h4 class="card-title">Card title</h4>
-                  <p class="card-text">Some example text. Some example text.</p>
-                  <a href="#" class="card-link">Card link</a>
 
-                </div>
-              </div> -->
             </div>
 
           </div>
@@ -61,9 +54,6 @@
 
 <script>
 
-// @ is an alias to /src
-// import TitleWithDescriptionCard from '@/components/TitleWithDescriptionCard.vue';
-// import About from '@/views/About.vue';
 
 export default {
     name: 'Projects',
@@ -96,15 +86,15 @@ export default {
         this.petProjectList.push(
           {
             projectTitle: 'Portfolio',
-            projectTools : "Node.js, Vue.js, Bootstrap 4",
+            projectTools : "Vue.js, Bootstrap 4",
             projectDescription : "In this project I have created my personal portfolio where all my skills and projects are highlighted and various charts has been used to show my expertise in all the fields I have interest or familiar with.",
             projectLink:"https://github.com/sadia-sharna/Portfolio",
             projectImage:"Portfolio.jpg",
           },
           {
             projectTitle: 'CarStoreUI',
-            projectTools : "Vue.js, Node.js",
-            projectDescription : "This is a single page application project with features like CRUD, Autocomplete Search. Cars can be viewed via pie charts Manufacturer Wise and in pagination with details.",
+            projectTools : "Vue.js",
+            projectDescription : "This is a single page application with features like CRUD, Autocomplete Search. Cars can be viewed via pie charts Manufacturer Wise and in pagination with details.",
             projectLink:"https://github.com/sadia-sharna/CarStoreUI",
             projectImage:"CarStore.jpg",
           },
@@ -114,6 +104,13 @@ export default {
             projectDescription : "API for Autocomplete Search, Pagination and CRUD support is written for CarStoreUI Application.",
             projectLink:"https://github.com/sadia-sharna/CarStore",
             projectImage:"CarStore.jpg",
+          },
+          {
+            projectTitle: 'Todolist',
+            projectTools : "Vue.js, Vuex",
+            projectDescription : "This is a single page application for tracking daily todolists.",
+            projectLink:"https://awesome-lichterman-e2dc1b.netlify.app/#/",
+            projectImage:"Todolist.jpg",
           },
           {
             projectTitle: 'ResumeMakerUI',
@@ -129,6 +126,7 @@ export default {
             projectLink:"https://github.com/sadia-sharna/ResumeMakerApplication",
             projectImage:"ResumeMaker.jpg",
           },
+
         );
       },
     },
