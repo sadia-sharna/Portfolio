@@ -2,6 +2,13 @@
 .font-14 {
     font-size: 14px;
 }
+.active{
+  color: white !important;
+  background-color: #303156!important;
+}
+/* .nav-item > a:hover {
+  color: aqua;
+} */
 </style>
 
 <template>
@@ -18,6 +25,14 @@
                             <h3>Sadia Tasnim</h3>
                             <div class="text-center">
                                 Associate Software Engineer
+                               
+                            </div>
+                            <div>
+                                 <a class="mr-1" href = "mailto: s.sharna06@gmail.com"> <i class="fa fa-envelope" aria-hidden="true"></i> </a>|
+                                        <a class="mr-1" href="https://github.com/sadia-sharna" target="_blank" ><i class="fa fa-github" aria-hidden="true"></i></a>|
+                                        <a class="mr-1" href="https://www.linkedin.com/in/sadia-tasnim-b82aa7160/?originalSubdomain=bd" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>|
+                                        <a class="mr-1" href="https://codepen.io/sadia-sharna" target="_blank" ><i class="fa fa-codepen" aria-hidden="true"></i> </a>
+
                             </div>
                             <hr class="border">
 
@@ -27,17 +42,13 @@
 
                                 </div> -->
                                 <div class="card-body text-left font-14">
-                                    <!-- <ul class="list-group list-group-flush">
-                                      <a class="list-group-item list-group-item-action" @click="showItem='project'"> Projects</a>
-                                      <a class="list-group-item list-group-item-action" @click="showItem='tool'"> Skills</a>
-                                      <a class="list-group-item list-group-item-action"> Hobbies</a>
-                                    </ul> -->
+
                                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="cursor:pointer;">
-                                         <a class="nav-link active"  data-toggle="pill"  role="tab"  aria-selected="true" @click="showItem='aboutme'">About Me</a>
-                                          <a class="nav-link" data-toggle="pill" role="tab" aria-selected="false" @click="showItem='experience'">Experience</a>
-                                        <a class="nav-link " data-toggle="pill"  role="tab"  aria-selected="true" @click="showItem='project'">Projects</a>
-                                        <a class="nav-link"  data-toggle="pill" role="tab" aria-selected="false"  @click="showItem='tool'">Skills</a>
-                                       
+                                        <a class="nav-link active" data-toggle="pill" role="tab"  @click="showItem='aboutme'">About Me</a>
+                                        <a class="nav-link" data-toggle="pill" role="tab" @click="showItem='experience'">Experience</a>
+                                        <a class="nav-link " data-toggle="pill" role="tab"  @click="showItem='project'">Pet Projects</a>
+                                        <a class="nav-link" data-toggle="pill" role="tab"  @click="showItem='tool'">Skills</a>
+
                                     </div>
 
                                 </div>
@@ -50,12 +61,13 @@
                 <div class="col-sm-8">
                     <div class="card">
 
-                        <div class="card-body text-left" style="max-height:475px; overflow-y:scroll;">
-                             <!-- <Aboutme title="Who am I?" /> -->
-                            <Aboutme v-show="showItem == 'aboutme'" title="About me" />
+                        <div class="card-body text-left" style="max-height:31rem; overflow-y:scroll;">
+                            <!-- <Aboutme title="Who am I?" /> -->
+                            <Aboutme v-show="showItem == 'aboutme'" title="Who am I?" />
+                             <Education v-show="showItem == 'aboutme'" title="Education" />
                             <Skills v-show="showItem == 'tool'" title="Tools & technologies" mostUsedTechTitle="Most Used Technologies" />
                             <Projects v-show="showItem == 'project'" title="Pet Projects" />
-                            <Experience v-show="showItem == 'experience'"/>
+                            <Experience v-show="showItem == 'experience'" title="Experience "/>
 
                         </div>
                     </div>
@@ -72,7 +84,7 @@
 // @ is an alias to /src
 
 import Aboutme from '@/views/Aboutme.vue';
-// import About from '@/views/About.vue';
+import Education from '@/views/Education.vue';
 import Skills from '@/views/Skills.vue';
 import ProblemSolving from '@/views/ProblemSolving.vue';
 import Projects from '@/views/Projects.vue';
@@ -82,6 +94,7 @@ export default {
     name: 'SummaryView',
     components: {
         Aboutme,
+        Education,
         Skills,
         ProblemSolving,
         Projects,
