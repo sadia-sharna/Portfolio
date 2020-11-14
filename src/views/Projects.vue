@@ -18,7 +18,7 @@
 <template>
 <div>
 <div class="card border-0">
-    <div class="card-header text-left darkblue-bg text-white">
+    <div class="card-header text-left darkblue-bg text-white" v-show="title">
         {{title}}
 
     </div>

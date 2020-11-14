@@ -13,6 +13,31 @@
 
 <template>
 <div>
+    <div class="card border-0">
+    <div class="card-header text-left darkblue-bg text-white">
+        {{mostUsedTechTitle}}
+
+    </div>
+    <div class="card-body text-left font-14">
+        <p>
+          <div class="row">
+
+                <canvas id="pieChartofCode" class="col-sm-6"></canvas>
+
+
+                <canvas id="pieChartofDB" class="col-sm-6"></canvas>
+
+
+          </div>
+          <div class="row">
+                <canvas id="pieChartofFramework" class="col-sm-6 mx-auto"></canvas>
+
+          </div>
+
+
+        </p>
+      </div>
+</div>
 <div class="card border-0">
     <div class="card-header text-left darkblue-bg text-white">
         {{title}}
@@ -61,46 +86,7 @@
 
     </div>
 </div>
-<div class="card border-0">
-    <div class="card-header text-left darkblue-bg text-white">
-        {{mostUsedTechTitle}}
 
-    </div>
-    <div class="card-body text-left font-14">
-        <p >
-          <div class="row">
-
-                <canvas id="pieChartofCode" class="col-sm-6"></canvas>
-
-
-                <canvas id="pieChartofDB" class="col-sm-6"></canvas>
-
-
-          </div>
-          <div class="row">
-                <canvas id="pieChartofFramework" class="col-sm-6 mx-auto"></canvas>
-
-          </div>
-
-<!--
-
-          <div class="w-50  d-sm-flex float-right">
-                      <canvas id="pieChartofFramework"></canvas>
-
-          </div>
-
-          <div class=" w-50 d-sm-flex">
-                      <canvas id="pieChartofDB"></canvas>
-
-          </div>
-          <div class="w-50 text-center d-sm-flex mx-auto mt-2">
-                      <canvas id="pieChartofCode"></canvas>
-
-          </div> -->
-
-        </p>
-      </div>
-    </div>
 </div>
 
 </template>
@@ -156,7 +142,7 @@ export default {
           },
           pieChartofDB : {
             labels: ["SQL", "SQLite","MongoDB", "MySQL", "PL/SQL"],
-            data:[40, 25, 15, 15, 5],
+            data:[50, 25, 5, 15, 5],
           },
 
         };
