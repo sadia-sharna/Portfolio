@@ -137,8 +137,8 @@ export default {
             data:[35, 40, 10, 15, 7, 3],
           },
           pieChartofFramework : {
-            labels: ["Vue.js", "ASP.NET Core", "ASP.NET MVC", "AngularJS"],
-            data:[30, 20, 15, 15],
+            labels: ["Vue.js", "React.js", "ASP.NET Core", "ASP.NET MVC", "AngularJS", "GraphQL"],
+            data:[20, 30, 20, 15, 15, 10],
           },
           pieChartofDB : {
             labels: ["SQL", "SQLite","MongoDB", "MySQL", "PL/SQL"],
@@ -157,12 +157,12 @@ export default {
       },
       getSkillSet(){
       this.skillSet.code.push("C#", "JavaScript", "Python", "C++", "Java", "C");
-      this.skillSet.framework.push("ASP.NET Core", "ASP.NET MVC", "Vue.js", "AngularJS", "LINQ");
+      this.skillSet.framework.push("ASP.NET Core", "Vue.js", "AngularJS", "LINQ", "React.js");
       this.skillSet.database.push("SQL", "SQLite","MongoDB", "MySQL", "PL/SQL");
       this.skillSet.orm.push("Entity Framework", "Entity Framework Core");
       this.skillSet.runtimeEnvironment.push("Node.js");
       this.skillSet.versionControl.push("Git", "TFS");
-      this.skillSet.cloud.push("Azure");
+      this.skillSet.cloud.push("Azure", "AWS");
       this.skillSet.os.push("Windows", "Linux");
 
       },
